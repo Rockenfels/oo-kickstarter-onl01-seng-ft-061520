@@ -14,6 +14,6 @@ class Project
   end
   
   def backers
-    Backer.all.reject{ |backer| backer.
+    Backer.all.reject{ |backer| backer.backed_projects.include
   end
 end
