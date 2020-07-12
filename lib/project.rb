@@ -14,6 +14,10 @@ class Project
     @@all
   end
   
+  def add_backer(backer)
+    @backers << backer
+  end
+  
   def backers
     Backer.all.reject{ |backer| !backer.backed_projects.include(self) }
   end
