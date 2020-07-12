@@ -14,6 +14,6 @@ class Project
   end
   
   def backers
-    Backer.all.reject()
+    Backer.all.reject{ |backer| backer.
   end
 end
