@@ -6,6 +6,7 @@ class Project
   
   def initialize(title)
     @title = title
+    @backers = []
     @@all << self
   end
   
@@ -14,6 +15,6 @@ class Project
   end
   
   def backers
-    Backer.all.reject{ |backer| backer.backed_projects.include
+    Backer.all.reject{ |backer| !backer.backed_projects.include(self) }
   end
 end
