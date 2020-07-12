@@ -9,5 +9,7 @@ class Project
     @@all << self
   end
   
-  
+  def backers
+    Backers.all
+  end
 end
