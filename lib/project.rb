@@ -22,7 +22,7 @@ class Project
   end
   
   def backers
-    resutls = Backer.all.reject{ |backer| !backer.backed_projects.include?(self) }
+    results = Backer.all.reject{ |backer| !backer.backed_projects.include?(self) }
     results
   end
 end
