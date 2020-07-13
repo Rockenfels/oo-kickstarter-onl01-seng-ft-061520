@@ -11,7 +11,10 @@ class Backer
   end
   
   def back_project(project)
-    @backed_project << project
+    if project.class == Project
+      @backed_project << project
+      project.add_backer(self)
+    end
   end
   
   def self.all
